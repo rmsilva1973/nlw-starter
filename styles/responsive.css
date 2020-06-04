@@ -15,6 +15,10 @@
     #page-home main {
         align-items: center;
     }
+    #page-search-results .cards {
+        grid-template-columns: 1fr;
+
+    }
 }
 
 @media (max-width: 1400px) {
