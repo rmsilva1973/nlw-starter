@@ -32,3 +32,42 @@
         background-position-y: 200px;
     }
 }
+
+@media (max-width: 420px) {
+    #page-create-point header {
+        margin-top: 12px;
+    }
+    #page-create-point header a {
+        font-size: 12px;
+    }
+    #page-create-point header a span {
+        margin: 0 0px 0 12px;
+        width: 25px;
+        height: 24px;
+    }
+    form {
+        padding: 12px;
+        margin-top: 16px;
+        display:flex;
+        flex-direction: column;
+    }
+    form fieldset {
+        margin-top: 32px;
+    }
+    form .field-group {
+        flex-direction: column;
+    }
+    form .field-group .field + .field {
+        margin-left: 0px;
+    }
+    form legend {
+        display: block;
+        margin-bottom:16px;
+    }
+    .items-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    form button {
+        margin: 32px 20px;
+    }
+}
