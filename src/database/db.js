@@ -18,46 +18,46 @@ db.serialize(() => {
         );
     `)
 
-    const values = [
-        "https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
-        "Papersider",
-        "Guilherme Gemballa, Jardim América",
-        "Nº 260",
-        "Santa Catarina",
-        "Rio do Sul",
-        "Papéis e Papelões"
-    ]
+//     const values = [
+//         "https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+//         "Papersider",
+//         "Guilherme Gemballa, Jardim América",
+//         "Nº 260",
+//         "Santa Catarina",
+//         "Rio do Sul",
+//         "Papéis e Papelões"
+//     ]
 
-    const query = `
-        INSERT INTO places (
-            image,
-            name,
-            address,
-            address2,
-            state,
-            city,
-            items
-        ) VALUES (?, ?, ?, ?, ?, ?, ?)
-    `
+//     const query = `
+//         INSERT INTO places (
+//             image,
+//             name,
+//             address,
+//             address2,
+//             state,
+//             city,
+//             items
+//         ) VALUES (?, ?, ?, ?, ?, ?, ?)
+//     `
 
-    function afterInsertData (err) {
-        if (err) {
-            return console.log(err)
-        }
+//     function afterInsertData (err) {
+//         if (err) {
+//             return console.log(err)
+//         }
 
-        console.log("Caastrado com sucesso");
-        console.log(this);
-    }
+//         console.log("Caastrado com sucesso");
+//         console.log(this);
+//     }
 
-   // db.run(query, values, afterInsertData)
+//    // db.run(query, values, afterInsertData)
 
-    db.all("SELECT * FROM places", function(err, rows) {
-        if (err) {
-            return console.log(err)
-        }
-        console.log("Aqui estão os seus registros:")
-        console.log(rows)
-    })
+//     db.all("SELECT * FROM places", function(err, rows) {
+//         if (err) {
+//             return console.log(err)
+//         }
+//         console.log("Aqui estão os seus registros:")
+//         console.log(rows)
+//     })
 
     // db.run("DELETE FROM places", function(err) {
     //     if (err) {
